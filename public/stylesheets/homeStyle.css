@@ -1,0 +1,11 @@
+#label_container{
+    margin-top: 10px;
+}
+#label_card{
+    margin: 3px;
+    padding: 5px;
+}
+#label_image{
+    height: 18em;
+    width: auto;
+}

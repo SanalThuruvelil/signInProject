@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const app = express();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -31,5 +32,22 @@ router.get('/', function(req, res, next) {
     ]
   res.render('home',{products});
 });
+
+
+
+app.post('/', (req, res) => {
+    // Destroy the user's session
+    req.session.destroy(err => {
+        if (err) {
+            console.error('Error destroying session:', err);
+            res.status(500).send('Server error');
+        } else {
+            // Respond with a success status
+            res.sendStatus(200);
+        }
+    });
+});
+
+
 
 module.exports = router;
