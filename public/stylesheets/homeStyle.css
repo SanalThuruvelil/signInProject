@@ -4,8 +4,13 @@
 #label_card{
     margin: 3px;
     padding: 5px;
+    
 }
 #label_image{
     height: 18em;
     width: auto;
+}
+#navbar-brand{
+    color: red;
+    font-weight: bolder;
 }
